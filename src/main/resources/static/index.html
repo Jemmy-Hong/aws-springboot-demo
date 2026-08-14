@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎页面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            /* 柔和蓝紫渐变背景 */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: "Microsoft YaHei", system-ui, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .welcome-card {
+            background-color: #ffffff;
+            padding: 60px 80px;
+            border-radius: 20px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+            text-align: center;
+            /* 入场淡入动画 */
+            animation: fadeIn 1s ease;
+        }
+
+        .welcome-card h1 {
+            font-size: 42px;
+            color: #2d3748;
+            margin-bottom: 16px;
+        }
+
+        .welcome-card p {
+            font-size: 18px;
+            color: #718096;
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 36px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 17px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234,0.4);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 手机适配 */
+        @media(max-width: 600px) {
+            .welcome-card {
+                padding: 40px 24px;
+                margin: 16px;
+            }
+            .welcome-card h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="welcome-card">
+    <h1>👋 欢迎光临</h1>
+    <p>Nice to meet you，this is the welcome page!</p>
+    <a class="btn" href="#">Hello, Jamie</a>
+</div>
+</body>
+</html>
